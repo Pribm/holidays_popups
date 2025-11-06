@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en-AU">
 <head>
@@ -234,3 +235,144 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelect
 </script>
 </body>
 </html>
+=======
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carpal Tunnel QLD • Holiday Closure</title>
+
+  <style>
+    :root{
+      --e-global-color-primary:   #3D75A3; /* Primary */
+      --e-global-color-secondary: #D5AD5F; /* Gold */
+      --e-global-color-text:      #212E3F; /* Text */
+      --e-global-color-accent:    #3D75A3; /* Accent */
+    }
+  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      color:var(--e-global-color-text);
+      background:#f6f8fb;
+    }
+
+    .ct-overlay{
+      position:fixed;inset:0;background:rgba(33,46,63,.72);
+      display:grid;place-items:center;padding:22px;z-index:99999;
+    }
+    .ct-dialog{
+      width:min(980px,96vw);background:#fff;border-radius:22px;overflow:hidden;
+      box-shadow:0 26px 70px rgba(0,0,0,.38);
+      display:grid;grid-template-columns:1.2fr 1fr;position:relative;
+    }
+    @media (max-width:900px){ .ct-dialog{grid-template-columns:1fr} }
+
+    .ct-media{position:relative;min-height:320px;background:#000}
+    .ct-media .tag{
+      position:absolute;top:14px;left:14px;z-index:2;
+      background:#fff;color:var(--e-global-color-primary);
+      font-weight:700;padding:8px 12px;border-radius:999px;font-size:13px;
+      box-shadow:0 4px 14px rgba(0,0,0,.18)
+    }
+    .ct-media img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+      filter:brightness(.88);
+    }
+    .ct-media .ribbon{
+      position:absolute;inset:0;pointer-events:none;
+      background: radial-gradient(80% 60% at 50% 40%, rgba(213,173,95,.18), transparent 60%);
+    }
+
+    .ct-body{padding:26px 24px 16px}
+    .ct-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--e-global-color-primary);margin-bottom:6px}
+    .ct-brand .dot{width:8px;height:8px;border-radius:50%;background:var(--e-global-color-secondary)}
+    h1{margin:0 0 8px;font-size:clamp(22px,3.6vw,32px);line-height:1.15;color:var(--e-global-color-primary)}
+    .lead{margin:0 0 12px;color:rgba(33,46,63,.85)}
+    .ct-grid{display:grid;gap:12px;margin:14px 0}
+    .ct-card{
+      border:1px dashed rgba(61,117,163,.25);
+      background:#f9fbfe;border-radius:14px;padding:12px 14px;font-weight:600;color:var(--e-global-color-text)
+    }
+    .ct-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .btn{
+      appearance:none;border:none;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer;text-decoration:none
+    }
+    .btn.primary{
+      background:linear-gradient(180deg,var(--e-global-color-primary),#2f5f84);color:#fff
+    }
+    .btn.ghost{
+      background:#eef3f7;color:var(--e-global-color-text);border:2px solid transparent
+    }
+    .ct-foot{
+      display:flex;justify-content:space-between;align-items:center;border-top:1px solid #edf1f4;
+      margin-top:14px;padding:12px 18px;color:#64748b
+    }
+    .ct-close{
+      all:unset;cursor:pointer;border-radius:10px;padding:8px 10px;color:#0b1224
+    }
+    .ct-close:hover{background:#f5f7fb}
+    .emerg{font-weight:700;color:var(--e-global-color-secondary)}
+    .ct-x{
+      position:absolute;top:12px;right:12px;width:42px;height:42px;border-radius:50%;border:none;cursor:pointer;
+      background:rgba(33,46,63,.7);color:#fff;font-size:20px;z-index:3
+    }
+  </style>
+</head>
+<body>
+  <div class="ct-overlay" role="dialog" aria-modal="true" aria-labelledby="ct-title">
+    <div class="ct-dialog">
+      <button class="ct-x" aria-label="Close notice" onclick="document.querySelector('.ct-overlay').remove()">✕</button>
+
+      <!-- LEFT: Christmas + Hospital image -->
+      <section class="ct-media" aria-hidden="true">
+        <span class="tag">Holiday Notice</span>
+        <img
+          src="../christmas_img.png"
+          alt="Stethoscope and Christmas decorations on a medical desk"
+        />
+        <div class="ribbon"></div>
+      </section>
+
+      <!-- RIGHT: Content -->
+      <section class="ct-body">
+        <div class="ct-brand"><span class="dot"></span> Carpal Tunnel QLD</div>
+        <h1 id="ct-title">Christmas & New Year Hours</h1>
+        <p class="lead">We’ll be closed on the Queensland public holidays. Thank you for your understanding and have a safe festive season.</p>
+
+        <div class="ct-grid" aria-label="Holiday dates">
+          <div class="ct-card">Closed: <strong>25 Dec</strong> (Christmas Day)</div>
+          <div class="ct-card">Reopens: <strong>2 Jan</strong></div>
+        </div>
+
+        <p class="lead" style="margin-top:2px">
+          For emergencies call <strong class="emerg">000</strong>. For non-urgent health advice, contact
+          <strong>13 HEALTH</strong> (13 43 25 84).
+        </p>
+
+        <div class="ct-cta">
+          <a class="btn primary" href="#contact">Send an enquiry</a>
+        </div>
+
+        <div class="ct-foot">
+          <span>We’ll respond to messages after we reopen.</span>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.ct-close').addEventListener('click',()=>document.querySelector('.ct-overlay').remove());
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelector('.ct-overlay')?.remove();}});
+  </script>
+</body>
+</html>
+>>>>>>> e5c60f29ca10e78742a4524defee00d08e9aaa4a

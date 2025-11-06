@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,3 +64,70 @@
   </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QLD Veins – Christmas / New Year Hours</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --primary:#3E75A3; --secondary:#172A39; --text:#585858; --accent:#C6AF61;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+    .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);display:grid;place-items:center;padding:20px;z-index:9999}
+    .shell{width:min(980px,96vw);border-radius:18px;overflow:hidden;background:#fff;color:var(--secondary);display:grid;grid-template-columns:1.2fr 1fr;box-shadow:0 22px 60px rgba(0,0,0,.35)}
+    .media{
+      background:url("https://images.pexels.com/photos/4226764/pexels-photo-4226764.jpeg?auto=compress&cs=tinysrgb&w=1400") center/cover no-repeat;
+      min-height:340px;position:relative
+    }
+    .tag{
+      position:absolute;top:16px;left:16px;background:rgba(23,42,57,.7);color:#fff;padding:8px 12px;border-radius:999px;font-size:13px
+    }
+    .body{padding:28px}
+    h1{margin:0 0 10px;font-size:clamp(22px,3.6vw,32px);font-weight:700}
+    p{margin:0 0 14px;color:var(--text)}
+    .list{margin:10px 0 18px;padding:0 0 0 18px;color:var(--text)}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      background:linear-gradient(180deg,var(--primary),#315f85);color:#fff;border:none;border-radius:12px;
+      padding:12px 16px;font-weight:700;cursor:pointer;text-decoration:none
+    }
+    .btn.outline{
+      background:transparent;border:2px solid var(--primary);color:var(--primary)
+    }
+    .close{
+      position:absolute;top:16px;right:16px;background:rgba(0,0,0,.5);border:none;color:#fff;
+      width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:20px
+    }
+    @media (max-width:900px){.shell{grid-template-columns:1fr}.media{min-height:260px}}
+  </style>
+</head>
+<body>
+  <div class="backdrop" role="dialog" aria-modal="true">
+    <div class="shell">
+      <div class="media">
+        <span class="tag">Holiday Update</span>
+      </div>
+      <div class="body">
+        <button class="close" onclick="document.querySelector('.backdrop').remove()" aria-label="Close">✕</button>
+        <h1>Christmas & New Year Hours</h1>
+        <p>QLD Veins will be <strong>closed 25–26 Dec</strong> and <strong>1 Jan</strong>, with limited hours between. Thank you for your understanding.</p>
+        <ul class="list">
+          <li><strong>Emergencies</strong>: call <strong>000</strong> immediately.</li>
+          <li>Health advice: <strong>13 HEALTH</strong> (13&nbsp;43&nbsp;25&nbsp;84).</li>
+          <li>We’ll reply to online enquiries after we reopen on <strong>2 Jan</strong>.</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="#contact">Send an enquiry</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+>>>>>>> e5c60f29ca10e78742a4524defee00d08e9aaa4a
