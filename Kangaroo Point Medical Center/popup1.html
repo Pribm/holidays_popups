@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kangaroo Point Medical Center • Holiday Closure</title>
+
+  <!-- Brand colours -->
+  <style>
+    :root{
+      --e-global-color-primary:   #3D75A3; /* Primary */
+      --e-global-color-secondary: #D5AD5F; /* Gold */
+      --e-global-color-text:      #212E3F; /* Text */
+      --e-global-color-accent:    #3D75A3; /* Accent */
+    }
+  </style>
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+      color:var(--e-global-color-text);
+      background:#f6f8fb;
+    }
+
+    .kp-overlay{
+      position:fixed;inset:0;background:rgba(33,46,63,.72);
+      display:grid;place-items:center;padding:22px;z-index:99999;
+    }
+    .kp-dialog{
+      width:min(980px,96vw);background:#fff;border-radius:22px;overflow:hidden;
+      box-shadow:0 26px 70px rgba(0,0,0,.38);
+      display:grid;grid-template-columns:1.2fr 1fr;position:relative;
+    }
+    @media (max-width:900px){ .kp-dialog{grid-template-columns:1fr} }
+
+    .kp-media{position:relative;min-height:320px;background:#000}
+    .kp-media .tag{
+      position:absolute;top:14px;left:14px;z-index:2;
+      background:#fff;color:var(--e-global-color-primary);
+      font-weight:700;padding:8px 12px;border-radius:999px;font-size:13px;
+      box-shadow:0 4px 14px rgba(0,0,0,.18)
+    }
+    .kp-media img{
+      position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+      filter:brightness(.88);
+    }
+    .kp-media .ribbon{
+      position:absolute;inset:0;pointer-events:none;
+      background: radial-gradient(80% 60% at 50% 40%, rgba(213,173,95,.18), transparent 60%);
+    }
+
+    .kp-body{padding:26px 24px 16px}
+    .kp-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--e-global-color-primary);margin-bottom:6px}
+    .kp-brand .dot{width:8px;height:8px;border-radius:50%;background:var(--e-global-color-secondary)}
+    h1{margin:0 0 8px;font-size:clamp(22px,3.6vw,32px);line-height:1.15;color:var(--e-global-color-primary)}
+    .lead{margin:0 0 12px;color:rgba(33,46,63,.85)}
+    .kp-grid{display:grid;gap:12px;margin:14px 0}
+    .kp-card{
+      border:1px dashed rgba(61,117,163,.25);
+      background:#f9fbfe;border-radius:14px;padding:12px 14px;font-weight:600;color:var(--e-global-color-text)
+    }
+    .kp-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .btn{
+      appearance:none;border:none;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer;text-decoration:none
+    }
+    .btn.primary{
+      background:linear-gradient(180deg,var(--e-global-color-primary),#2f5f84);color:#fff
+    }
+    .btn.ghost{
+      background:#eef3f7;color:var(--e-global-color-text);border:2px solid transparent
+    }
+    .kp-foot{
+      display:flex;justify-content:space-between;align-items:center;border-top:1px solid #edf1f4;
+      margin-top:14px;padding:12px 18px;color:#64748b
+    }
+    .kp-close{
+      all:unset;cursor:pointer;border-radius:10px;padding:8px 10px;color:#0b1224
+    }
+    .kp-close:hover{background:#f5f7fb}
+    .emerg{font-weight:700;color:var(--e-global-color-secondary)}
+    .kp-x{
+      position:absolute;top:12px;right:12px;width:42px;height:42px;border-radius:50%;border:none;cursor:pointer;
+      background:rgba(33,46,63,.7);color:#fff;font-size:20px;z-index:3
+    }
+  </style>
+</head>
+<body>
+  <div class="kp-overlay" role="dialog" aria-modal="true" aria-labelledby="kp-title">
+    <div class="kp-dialog">
+      <button class="kp-x" aria-label="Close notice" onclick="document.querySelector('.kp-overlay').remove()">✕</button>
+
+      <section class="kp-media" aria-hidden="true">
+        <span class="tag">Holiday Update</span>
+        <img
+          src="../santa.png"
+          alt="Santa using a Stethoscope"
+        />
+        <div class="ribbon"></div>
+      </section>
+
+      <section class="kp-body">
+        <div class="kp-brand"><span class="dot"></span> Kangaroo Point Medical Center</div>
+        <h1 id="kp-title">Christmas & New Year Hours</h1>
+        <p class="lead">We’ll be closed on the Queensland public holidays. Thank you for your understanding and have a safe festive season.</p>
+
+        <div class="kp-grid" aria-label="Holiday dates">
+          <div class="kp-card">Closed: <strong>25 Dec</strong> (Christmas Day)</div>
+          <div class="kp-card">Reopens: <strong>2 Jan</strong></div>
+        </div>
+
+        <p class="lead" style="margin-top:2px">
+          For emergencies call <strong class="emerg">000</strong>. For non-urgent health advice, contact
+          <strong>13 HEALTH</strong> (13 43 25 84).
+        </p>
+
+        <div class="kp-cta">
+          <a class="btn primary" href="#contact">Send an enquiry</a>
+        </div>
+
+        <div class="kp-foot">
+          <span>We’ll respond to messages after we reopen.</span>
+
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.kp-close').addEventListener('click',()=>document.querySelector('.kp-overlay').remove());
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelector('.kp-overlay')?.remove();}});
+  </script>
+</body>
+</html>

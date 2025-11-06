@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Popup Models Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#2C5848;
+      --accent:#C6AF61;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+      background:#f7f8f8;
+      color:#0f172a;
+      display:flex;
+      flex-direction:column;
+      height:100vh;
+    }
+    header{
+      background:#fff;
+      border-bottom:1px solid #e5e7eb;
+      box-shadow:0 2px 6px rgba(0,0,0,.06);
+      padding:12px 20px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    h1{
+      font-size:1.2rem;
+      color:var(--brand);
+      font-weight:700;
+    }
+    nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+    }
+    nav a{
+      padding:8px 14px;
+      border-radius:6px;
+      text-decoration:none;
+      background:#f1f5f3;
+      color:var(--brand);
+      font-weight:600;
+      transition:.25s ease;
+    }
+    nav a:hover{background:var(--brand);color:#fff;}
+    nav a.active{background:var(--brand);color:#fff;}
+    iframe{
+      flex:1;
+      width:100%;
+      border:none;
+      background:#fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Holiday Popups Preview</h1>
+    <nav>
+      <a href="./easyscripts/popup2.html" target="preview">Easy Scripts</a>
+      <a href="./Kangaroo Point Medical Center/popup1.html" target="preview">Kangaroo Point</a>
+      <a href="./QLD VEINS/popup2.html" target="preview">QLD Veins</a>
+      <a href="./carpal_tunnel/popup1.html" target="preview">Carpal Tunnel</a>
+    </nav>
+  </header>
+
+  <iframe name="preview" src="./easyscripts/popup1.html" title="Popup Preview"></iframe>
+
+  <script>
+    const links=document.querySelectorAll("nav a");
+    links.forEach(link=>{
+      link.addEventListener("click",()=>{
+        links.forEach(l=>l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
