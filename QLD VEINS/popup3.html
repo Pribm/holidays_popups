@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Holiday Closure — QLD Veins</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --primary:#3E75A3; --secondary:#172A39; --text:#585858; --accent:#C6AF61;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+    .wrap{
+      position:fixed;inset:0;display:grid;place-items:center;padding:20px;z-index:9999;
+      background:
+        linear-gradient(0deg,rgba(23,42,57,.35),rgba(23,42,57,.35)),
+        url("https://unsplash.com/photos/EcPW5yjPmQM/download?force=true&w=1600") center/cover no-repeat;
+    }
+
+    .card{
+      width:min(760px,94vw);
+      background:rgba(255,255,255,.8);
+      backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.6);
+      box-shadow:0 16px 50px rgba(0,0,0,.35);
+      border-radius:18px;padding:26px 22px 20px;position:relative;color:var(--secondary)
+    }
+    .close{
+      position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:12px;border:none;cursor:pointer;
+      background:rgba(23,42,57,.75);color:#fff;font-size:18px
+    }
+
+    .row{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .badge{background:linear-gradient(180deg,var(--accent),#b99e48);padding:8px 12px;border-radius:999px;font-weight:700;color:#0d1b26}
+    h1{margin:8px 0 4px;font-size:clamp(22px,4vw,34px);font-weight:700}
+    p{margin:0 0 10px;color:var(--text)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+    .tile{
+      border:1px solid #e6ebf0;border-radius:14px;padding:14px;background:#fff
+    }
+    .tile h3{margin:0 0 6px;font-size:16px}
+    .tile p{margin:0;font-size:14px}
+    .cta{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      background:linear-gradient(180deg,var(--primary),#315f85);color:#fff;border:none;border-radius:12px;
+      padding:12px 16px;font-weight:700;text-decoration:none
+    }
+    .btn.ghost{
+      background:transparent;border:2px solid var(--primary);color:var(--primary)
+    }
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="dialog" aria-modal="true">
+    <div class="card">
+      <button class="close" aria-label="Close" onclick="document.querySelector('.wrap').remove()">✕</button>
+
+      <div class="row">
+        <span class="badge">Holiday Notice</span>
+        <h1 style="margin-left:6px;">Seasonal Hours — QLD Veins</h1>
+      </div>
+      <p>Our clinic will be closed on <strong>25–26 December</strong> and <strong>1 January</strong>. Limited hours operate between the public holidays. Thank you for your understanding.</p>
+
+      <div class="grid">
+        <div class="tile">
+          <h3>Urgent Help</h3>
+          <p><strong>Call 000</strong> for emergencies. For non-urgent advice, call <strong>13 HEALTH</strong> (13&nbsp;43&nbsp;25&nbsp;84).</p>
+        </div>
+        <div class="tile">
+          <h3>We’re Back</h3>
+          <p>Normal hours resume <strong>2 January</strong>. We’ll reply to enquiries in the order received.</p>
+        </div>
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="#contact">Contact us</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

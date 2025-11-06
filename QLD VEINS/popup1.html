@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QLD Veins – Holiday Notice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --primary:#3E75A3;
+      --secondary:#172A39;
+      --text:#585858;
+      --accent:#C6AF61;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+    .backdrop{
+      position:fixed;inset:0;background:rgba(23,42,57,0.65);
+      display:flex;align-items:center;justify-content:center;padding:24px;z-index:9999;
+    }
+    .popup{
+      position:relative;width:min(920px,92vw);border-radius:18px;overflow:hidden;
+      color:#fff;box-shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    .hero{
+      position:relative;min-height:420px;display:grid;place-items:center;text-align:center;
+      background:
+        linear-gradient( to bottom, rgba(23,42,57,.15), rgba(23,42,57,.7) 60% ),
+        url("https://unsplash.com/photos/EcPW5yjPmQM/download?force=true&w=1600") center/cover no-repeat;
+    }
+    .hero h1{margin:0 0 10px;font-weight:700;letter-spacing:.2px;font-size:clamp(24px,4vw,36px)}
+    .hero p{margin:0 0 22px;font-size:clamp(14px,2.3vw,18px);opacity:.95}
+    .pill{
+      display:inline-flex;gap:10px;align-items:center;justify-content:center;
+      padding:12px 18px;border-radius:999px;text-decoration:none;color:#0d1b26;
+      background:linear-gradient(180deg,var(--accent),#b99e48);font-weight:700;
+      box-shadow:0 6px 20px rgba(198,175,97,.35)
+    }
+    .meta{
+      display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px
+    }
+    .chip{
+      color:#e7ecf1;background:rgba(62,117,163,.28);border:1px solid rgba(62,117,163,.45);
+      padding:7px 12px;border-radius:999px;font-size:13px
+    }
+
+    .panel{
+      background:#fff;color:var(--secondary);padding:22px;
+      display:grid;grid-template-columns:1fr 1fr;gap:18px
+    }
+    .card{
+      border:1px solid #e8eef3;border-radius:14px;padding:18px
+    }
+    .card h3{margin:0 0 8px;font-size:18px;color:var(--secondary)}
+    .card p{margin:0;font-size:14px;color:var(--text)}
+    .ok{color:#0c7c59}
+    .warn{color:#b85b00}
+
+    .close{
+      position:absolute;top:10px;right:10px;
+      width:38px;height:38px;border-radius:50%;border:none;cursor:pointer;
+      background:rgba(23,42,57,.35);backdrop-filter:blur(6px);color:#fff;font-size:20px;line-height:38px
+    }
+    @media (max-width:720px){
+      .panel{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="backdrop" role="dialog" aria-modal="true" aria-label="Holiday notice">
+    <div class="popup">
+      <button class="close" aria-label="Close" onclick="document.querySelector('.backdrop').remove()">✕</button>
+
+      <section class="hero">
+        <div class="content">
+          <h1>QLD Veins — Holiday Closure ✨</h1>
+          <p>We’ll be taking a short break over the **Christmas & New Year** period.<br/>
+             Clinical rooms are closed on <strong>25–26 Dec</strong> and <strong>1 Jan</strong>. Limited hours in between.</p>
+          <a class="pill" href="#contact">Need help? Contact us</a>
+          <div class="meta" aria-label="Important info">
+            <span class="chip">Emergencies: call <strong>000</strong></span>
+            <span class="chip">Non-urgent care: 13&nbsp;HEALTH (13&nbsp;43&nbsp;25&nbsp;84)</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="card">
+          <h3 class="ok">Reopening</h3>
+          <p>Normal hours resume from <strong>2 January</strong>. Online enquiries will be answered in the order received.</p>
+        </div>
+        <div class="card">
+          <h3 class="warn">While we’re closed</h3>
+          <p>For urgent vein/health issues, please visit your nearest hospital or call <strong>000</strong>. For general health advice, contact
+            <strong>13 HEALTH</strong>.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
